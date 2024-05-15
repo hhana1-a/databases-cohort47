@@ -25,7 +25,6 @@ LEFT JOIN author_paper ap ON a.author_id = ap.author_id
 LEFT JOIN research_papers rp ON ap.paper_id = rp.paper_id
 `;
 
-
 const query3 = `
 SELECT rp.paper_title, COUNT(ap.author_id) AS num_authors
 FROM research_papers rp
@@ -65,4 +64,4 @@ connection.end((err) => {
     } else {
         console.log('Database connection closed');
     }
-});
+})
